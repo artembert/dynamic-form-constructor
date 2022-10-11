@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-form-constructor",
+  "version": "1.0.0",
+  "description": "Generate form from json (React)",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artembert/dynamic-form-constructor.git"
+  },
+  "author": {
+    "name": "Artem Beresnev",
+    "email": "artembert@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artembert/dynamic-form-constructor/issues"
+  },
+  "homepage": "https://github.com/artembert/dynamic-form-constructor#readme"
+}
