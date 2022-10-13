@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es2017",
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "importHelpers": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": true,
+    "baseUrl": "."
+  },
+  "exclude": [
+    "**/*.js"
+  ]
+}

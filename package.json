@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "Generate form from json (React)",
   "main": "index.js",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/artembert/dynamic-form-constructor.git"
@@ -17,5 +15,56 @@
   "bugs": {
     "url": "https://github.com/artembert/dynamic-form-constructor/issues"
   },
-  "homepage": "https://github.com/artembert/dynamic-form-constructor#readme"
+  "homepage": "https://github.com/artembert/dynamic-form-constructor#readme",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.8.2",
+    "@types/react": "18.0.6",
+    "@types/react-dom": "18.0.2",
+    "bem-cn": "3.0.1",
+    "cross-env": "7.0.3",
+    "dotenv": "16.0.1",
+    "dotenv-webpack": "7.1.1",
+    "htmlescape": "1.1.1",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-redux": "8.0.1",
+    "ts-loader": "9.4.1",
+    "webpack": "5.72.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.9",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-react": "7.16.7",
+    "@csstools/normalize.css": "12.0.0",
+    "@types/dotenv-webpack": "7.0.3",
+    "@types/webpack": "5.28.0",
+    "@typescript-eslint/eslint-plugin": "5.23.0",
+    "@typescript-eslint/parser": "5.23.0",
+    "babel-loader": "8.2.5",
+    "css-loader": "6.7.1",
+    "eslint": "8.15.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "2.7.1",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "html-webpack-plugin": "5.5.0",
+    "husky": "8.0.0",
+    "install": "0.13.0",
+    "lint-staged": "12.4.1",
+    "mini-css-extract-plugin": "2.6.0",
+    "prettier": "2.6.2",
+    "style-loader": "3.3.1",
+    "typescript": "4.6.3",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.8.1",
+    "webpack-merge": "5.8.0"
+  }
 }
