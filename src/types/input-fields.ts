@@ -1,38 +1,41 @@
 type BaseInputFieldProps = {
+  type: string;
   name: string;
   label: string;
-  value: string;
-  onChange: (value: unknown) => void;
   error?: string;
 };
 
-export type InputFieldProps = BaseInputFieldProps & {
+export type TextFieldProps = BaseInputFieldProps & {
   type: "text";
+  value: string;
   onChange: (value: string) => void;
   placeholder?: string;
 };
 
 export type TextAreaFieldProps = BaseInputFieldProps & {
   type: "textarea";
+  value: string;
   onChange: (value: string) => void;
   placeholder?: string;
   rows?: number;
 };
 
 export type CheckboxFieldProps = BaseInputFieldProps & {
-  type: "checkbox";
   value: boolean;
+  type: "checkbox";
   onChange: (value: boolean) => void;
 };
 
 export type RadioFieldProps = BaseInputFieldProps & {
   type: "radio";
+  value: string;
   options: string[];
   onChange: (value: string) => void;
 };
 
 export type NumberFieldProps = BaseInputFieldProps & {
   type: "number";
+  value: string;
   onChange: (value: number) => void;
 };
 
@@ -41,3 +44,13 @@ export type DateFieldProps = BaseInputFieldProps & {
   value: Date;
   onChange: (value: Date) => void;
 };
+
+export type FormFieldProps =
+  | TextFieldProps
+  | TextAreaFieldProps
+  | CheckboxFieldProps
+  | RadioFieldProps
+  | NumberFieldProps
+  | DateFieldProps;
+
+export type FormFieldConfig = Omit<FormFieldProps, "onChange">;

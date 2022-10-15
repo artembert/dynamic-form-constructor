@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": [
       "dom",
-      "es2017",
+      "es2017"
     ],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -16,7 +16,8 @@
     "skipLibCheck": true,
     "declaration": false,
     "sourceMap": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "noImplicitAny": false
   },
   "exclude": [
     "**/*.js"
