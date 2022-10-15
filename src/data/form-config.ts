@@ -18,6 +18,7 @@ export const formConfigMock: FormFieldConfig[] = [
     name: "country",
     label: "Country",
     value: "",
+    error: "Required field",
   },
   {
     type: "text",

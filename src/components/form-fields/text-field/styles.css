@@ -4,8 +4,13 @@
 
 .text-field__label {
   display: block;
+  min-height: 22px;
 }
 
 .text-field__input {
 
+}
+
+.text-field__validation-container {
+  min-height: 22px;
 }

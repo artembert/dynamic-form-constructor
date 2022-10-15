@@ -1,6 +1,7 @@
-import { TextFieldProps } from "../../../types/input-fields";
-import block from "bem-cn";
 import { useId } from "react";
+import block from "bem-cn";
+import { TextFieldProps } from "../../../types/input-fields";
+import { ValidationMessage } from "../../validation-message";
 import "./styles.css";
 
 const b = block("text-field");
@@ -11,7 +12,9 @@ export const TextField = (props: TextFieldProps) => {
 
   return (
     <div className={b()}>
-      <label className={b("label")} htmlFor={id}>{label}</label>
+      <label className={b("label")} htmlFor={id}>
+        {label}
+      </label>
       <input
         className={b("input")}
         id={id}
@@ -21,7 +24,9 @@ export const TextField = (props: TextFieldProps) => {
         placeholder={placeholder}
         name={name}
       />
-      {error && <div>{error}</div>}
+      <div className={b("validation-container")}>
+        {error && <ValidationMessage>{error}</ValidationMessage>}
+      </div>
     </div>
   );
 };
