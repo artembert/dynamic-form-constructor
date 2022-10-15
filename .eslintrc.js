@@ -2,6 +2,9 @@ module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "import"],
+  parserOptions: {
+    project: ["./tsconfig.json"],
+  },
   extends: [
     "airbnb",
     "airbnb-typescript",
@@ -33,7 +36,8 @@ module.exports = {
     "react/button-has-type": "off",
     "react/jsx-no-bind": "off",
     "react/jsx-no-useless-fragment": "off",
-    "quotes": ["error", "double"],
+    "react/function-component-definition": "off",
+    quotes: ["error", "double"],
     "padding-line-between-statements": [
       "error",
       { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
