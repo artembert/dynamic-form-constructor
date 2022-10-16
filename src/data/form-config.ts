@@ -29,5 +29,8 @@ export const formConfigMock: FormConfig = {
       value: "",
     },
   ],
-  controls: [],
+  controls: [
+    { type: "reset", title: "Cancel" },
+    { type: "submit", title: "Save" },
+  ],
 };

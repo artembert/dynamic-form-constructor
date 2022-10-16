@@ -6,3 +6,7 @@
   display: block;
   min-height: 22px;
 }
+
+.text-field__input {
+  width: var(--input-width-m)
+}

@@ -7,6 +7,7 @@ export const OutputContainer = () => {
   const dispatch = useAppDispatch();
   const config = useAppSelector((state) => state.form.fields);
   const title = useAppSelector((state) => state.form.title);
+  const controls = useAppSelector((state) => state.form.controls);
   const fieldChangeHandler = useCallback(
     (name, value) => dispatch(changeFormField({ name, value })),
     [dispatch, changeFormField]
@@ -14,7 +15,12 @@ export const OutputContainer = () => {
 
   return (
     <StrictMode>
-      <Output title={title} formFields={config} onChange={fieldChangeHandler} />
+      <Output
+        title={title}
+        formFields={config}
+        onChange={fieldChangeHandler}
+        controls={controls}
+      />
     </StrictMode>
   );
 };

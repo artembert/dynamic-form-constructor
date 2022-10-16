@@ -16,6 +16,8 @@
   --font-input: 14px/20px var(--font-family);
   --font-validation-message: 700 12px/14px var(--font-family);
   --font-code: 700 12px/14px var(--font-family-monospace);
+
+  --input-width-m: 280px
 }
 
 * {

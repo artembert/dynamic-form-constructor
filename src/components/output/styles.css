@@ -1,3 +1,7 @@
+.output {
+  width: 280px;
+}
+
 .output__fields-list {
   display: grid;
   grid-gap: 12px;
@@ -10,4 +14,11 @@
   line-height: 24px;
   font: var(--font-h2);
   font-weight: bold;
+}
+
+.output__controls-list {
+  margin: 32px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px
 }

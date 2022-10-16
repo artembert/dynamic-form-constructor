@@ -2,13 +2,14 @@ import { useCallback } from "react";
 import block from "bem-cn";
 import memoize from "fast-memoize";
 import { FormFieldMemoized } from "../form-fields/form-field";
+import { ControlButton } from "../control-button";
 import { OutputProps } from "./types";
 import "./styles.css";
 
 const b = block("output");
 
 export const Output = (props: OutputProps) => {
-  const { title, formFields, onChange } = props;
+  const { title, formFields, onChange, controls } = props;
   const handleChange = useCallback(
     memoize((fieldName) => (value) => onChange(fieldName, value)),
     [onChange]
@@ -25,6 +26,13 @@ export const Output = (props: OutputProps) => {
                 {...(field as any)}
                 onChange={handleChange(field.name)}
               />
+            </div>
+          ))}
+        </div>
+        <div className={b("controls-list")}>
+          {controls.map((control) => (
+            <div className={b("control-item")}>
+              <ControlButton {...control} />
             </div>
           ))}
         </div>
