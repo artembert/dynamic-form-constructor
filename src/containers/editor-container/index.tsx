@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { Editor } from "../../components/editor";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { setConfig } from "../../store/features/form";
@@ -13,9 +12,5 @@ export const EditorContainer = () => {
     }
   };
 
-  return (
-    <StrictMode>
-      <Editor config={config} onChange={handleChange} />
-    </StrictMode>
-  );
+  return <Editor config={config} onChange={handleChange} />;
 };
