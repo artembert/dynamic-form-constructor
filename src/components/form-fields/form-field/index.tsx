@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { TextField } from "../text-field";
 import { FormFieldProps } from "../../../types/input-fields";
 
@@ -15,3 +16,5 @@ export const FormField = (props: FormFieldProps) => {
 
   return <Component {...props} />;
 };
+
+export const FormFieldMemoized = memo(FormField);
