@@ -7,15 +7,6 @@
   grid-gap: 12px;
 }
 
-.output__title {
-  margin: 0;
-  padding: 12px 0 16px;
-  font-size: 20px;
-  line-height: 24px;
-  font: var(--font-h2);
-  font-weight: bold;
-}
-
 .output__controls-list {
   margin: 32px 0 0;
   display: flex;

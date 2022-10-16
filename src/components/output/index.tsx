@@ -17,8 +17,8 @@ export const Output = (props: OutputProps) => {
 
   return (
     <form method="POST" target="_blank" className={b()}>
-      <section>
-        {title ? <h3 className={b("title")}>{title}</h3> : null}
+      <fieldset>
+        {title ? <legend>{title}</legend> : null}
         <div className={b("fields-list")}>
           {formFields.map((field) => (
             <div className={b("field-item")} key={field.name}>
@@ -36,7 +36,7 @@ export const Output = (props: OutputProps) => {
             </div>
           ))}
         </div>
-      </section>
+      </fieldset>
     </form>
   );
 };
