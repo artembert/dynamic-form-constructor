@@ -1,0 +1,7 @@
+.output__fields-list {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.output__field-item {
+}

@@ -1,13 +1,30 @@
-import { OutputProps } from "./types";
+/* eslint-disable react/jsx-props-no-spreading */
+import block from "bem-cn";
 import { FormField } from "../form-fields/form-field";
+import { OutputProps } from "./types";
+
+import "./styles.css";
+
+const b = block("output");
 
 export const Output = (props: OutputProps) => {
   const { formFields } = props;
+
+  const handleFieldChange = (e: any) => e;
+
   return (
-    <>
-      {formFields.map((field) => (
-        <FormField key={field.name} {...(field as any)} onChange={(e) => {}} />
-      ))}
-    </>
+    <form method="POST" target="_blank" className={b()}>
+      <div className={b("fields-list")}>
+        {formFields.map((field) => (
+          <div className={b("field-item")}>
+            <FormField
+              key={field.name}
+              {...(field as any)}
+              onChange={handleFieldChange}
+            />
+          </div>
+        ))}
+      </div>
+    </form>
   );
 };
