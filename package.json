@@ -18,7 +18,8 @@
   "homepage": "https://github.com/artembert/dynamic-form-constructor#readme",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint \"**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.8.2",

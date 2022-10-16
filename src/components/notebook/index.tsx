@@ -8,6 +8,7 @@ export const Notebook = (props: {
   result: JSX.Element;
 }) => {
   const { markup, result } = props;
+
   return (
     <main className={b()}>
       <section>

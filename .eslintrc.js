@@ -37,6 +37,7 @@ module.exports = {
     "react/jsx-no-bind": "off",
     "react/jsx-no-useless-fragment": "off",
     "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off",
     quotes: ["error", "double"],
     "padding-line-between-statements": [
       "error",

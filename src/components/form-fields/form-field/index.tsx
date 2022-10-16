@@ -8,8 +8,10 @@ const fieldMap = {
 export const FormField = (props: FormFieldProps) => {
   const { type } = props;
   const Component = fieldMap[type];
+
   if (Component === undefined) {
     throw new Error(`Unable to resolve component by type ${type}`);
   }
+
   return <Component {...props} />;
 };

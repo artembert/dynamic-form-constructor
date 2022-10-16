@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import block from "bem-cn";
 import { FormField } from "../form-fields/form-field";
 import { OutputProps } from "./types";
