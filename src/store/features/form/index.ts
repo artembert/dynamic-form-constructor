@@ -5,11 +5,7 @@ import { formConfigMock } from "../../../data/form-config";
 import { FormConfig } from "../../../types/form-config";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: FormConfig = {
-  title: "",
-  fields: formConfigMock,
-  controls: [],
-};
+const initialState: FormConfig = formConfigMock;
 
 export const formSlice = createSlice({
   name: "form",

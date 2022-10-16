@@ -1,7 +1,13 @@
 .output__fields-list {
   display: grid;
-  grid-gap: 8px;
+  grid-gap: 12px;
 }
 
-.output__field-item {
+.output__title {
+  margin: 0;
+  padding: 12px 0 16px;
+  font-size: 20px;
+  line-height: 24px;
+  font: var(--font-h2);
+  font-weight: bold;
 }
