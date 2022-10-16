@@ -31,7 +31,7 @@ export const Output = (props: OutputProps) => {
         </div>
         <div className={b("controls-list")}>
           {controls.map((control) => (
-            <div className={b("control-item")}>
+            <div key={control.title} className={b("control-item")}>
               <ControlButton {...control} />
             </div>
           ))}
