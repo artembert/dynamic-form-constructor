@@ -1,15 +1,14 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from "@reduxjs/toolkit";
-import { FormFieldConfig, InputValue } from "../../../types/input-fields";
+import { InputValue } from "../../../types/input-fields";
 import { formConfigMock } from "../../../data/form-config";
+import { FormConfig } from "../../../types/form-config";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export type CounterState = {
-  fields: FormFieldConfig[];
-};
-
-const initialState: CounterState = {
+const initialState: FormConfig = {
+  title: "",
   fields: formConfigMock,
+  controls: [],
 };
 
 export const formSlice = createSlice({
@@ -29,10 +28,10 @@ export const formSlice = createSlice({
         value: action.payload.value,
       });
     },
+    setConfig: (state, action: PayloadAction<FormConfig>) => action.payload,
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { changeFormField } = formSlice.actions;
+export const { changeFormField, setConfig } = formSlice.actions;
 
 export const formReducer = formSlice.reducer;
