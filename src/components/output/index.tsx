@@ -7,19 +7,16 @@ import "./styles.css";
 const b = block("output");
 
 export const Output = (props: OutputProps) => {
-  const { formFields } = props;
-
-  const handleFieldChange = (e: any) => e;
+  const { formFields, onChange } = props;
 
   return (
     <form method="POST" target="_blank" className={b()}>
       <div className={b("fields-list")}>
         {formFields.map((field) => (
-          <div className={b("field-item")}>
+          <div className={b("field-item")} key={field.name}>
             <FormField
-              key={field.name}
               {...(field as any)}
-              onChange={handleFieldChange}
+              onChange={(value) => onChange(field.name, value)}
             />
           </div>
         ))}

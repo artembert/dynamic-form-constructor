@@ -1,48 +1,42 @@
-type BaseInputFieldProps = {
+export type InputValue = string | number | boolean | Date;
+
+export type InputChangeHandler<T extends InputValue> = (value: T) => void;
+
+type BaseInputFieldProps<T extends InputValue> = {
+  value: T;
   type: string;
   name: string;
   label: string;
+  onChange: InputChangeHandler<T>;
   error?: string;
 };
 
-export type TextFieldProps = BaseInputFieldProps & {
+export type TextFieldProps = BaseInputFieldProps<string> & {
   type: "text";
-  value: string;
-  onChange: (value: string) => void;
   placeholder?: string;
 };
 
-export type TextAreaFieldProps = BaseInputFieldProps & {
+export type TextAreaFieldProps = BaseInputFieldProps<string> & {
   type: "textarea";
-  value: string;
-  onChange: (value: string) => void;
   placeholder?: string;
   rows?: number;
 };
 
-export type CheckboxFieldProps = BaseInputFieldProps & {
-  value: boolean;
+export type CheckboxFieldProps = BaseInputFieldProps<boolean> & {
   type: "checkbox";
-  onChange: (value: boolean) => void;
 };
 
-export type RadioFieldProps = BaseInputFieldProps & {
+export type RadioFieldProps = BaseInputFieldProps<string> & {
   type: "radio";
-  value: string;
   options: string[];
-  onChange: (value: string) => void;
 };
 
-export type NumberFieldProps = BaseInputFieldProps & {
+export type NumberFieldProps = BaseInputFieldProps<number> & {
   type: "number";
-  value: string;
-  onChange: (value: number) => void;
 };
 
-export type DateFieldProps = BaseInputFieldProps & {
+export type DateFieldProps = BaseInputFieldProps<Date> & {
   type: "date";
-  value: Date;
-  onChange: (value: Date) => void;
 };
 
 export type FormFieldProps =

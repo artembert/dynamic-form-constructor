@@ -1,13 +1,12 @@
 import { Notebook } from "../notebook";
-import { Output } from "../output";
-import { formConfigMock } from "../../data/form-config";
+import { OutputContainer } from "../../containers/output-container";
 
 export const App = () => (
   <Notebook
     markup={<div />}
     result={
       <div>
-        <Output formFields={formConfigMock} />
+        <OutputContainer />
       </div>
     }
   />
