@@ -10,6 +10,18 @@ export const NumberField = (props: NumberFieldProps) => {
   const { error, label, name, placeholder, value, onChange } = props;
   const id = useId();
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = parseInt(e.target.value.replace(/\D/, ""), 10);
+
+    if (!inputValue) {
+      onChange(0);
+    }
+
+    if (!Number.isNaN(inputValue)) {
+      onChange(inputValue);
+    }
+  };
+
   return (
     <div className={b()}>
       <label className={b("label")} htmlFor={id}>
@@ -20,8 +32,8 @@ export const NumberField = (props: NumberFieldProps) => {
         id={id}
         type="text"
         inputMode="numeric"
-        onChange={(e) => onChange(parseInt(e.target.value, 10))}
-        value={value}
+        onChange={handleChange}
+        value={value || ""}
         placeholder={placeholder}
         pattern="\d*"
         name={name}
