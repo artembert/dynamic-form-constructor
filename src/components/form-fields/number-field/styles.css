@@ -1,8 +1,8 @@
-.text-field {
+.number-field {
   display: block;
 }
 
-.text-field__label {
+.number-field__label {
   display: block;
   min-height: 22px;
 }

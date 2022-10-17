@@ -3,7 +3,7 @@ export type InputValue = string | number | boolean | Date;
 export type InputChangeHandler<T extends InputValue> = (value: T) => void;
 
 type BaseInputFieldProps<T extends InputValue> = {
-  value: T;
+  value?: T;
   type: string;
   name: string;
   label: string;
@@ -13,6 +13,7 @@ type BaseInputFieldProps<T extends InputValue> = {
 
 export type TextFieldProps = BaseInputFieldProps<string> & {
   type: "text";
+  pattern?: string;
   placeholder?: string;
 };
 
@@ -33,6 +34,7 @@ export type RadioFieldProps = BaseInputFieldProps<string> & {
 
 export type NumberFieldProps = BaseInputFieldProps<number> & {
   type: "number";
+  placeholder?: string;
 };
 
 export type DateFieldProps = BaseInputFieldProps<Date> & {

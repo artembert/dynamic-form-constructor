@@ -1,13 +1,13 @@
 import { useId } from "react";
 import block from "bem-cn";
-import { TextFieldProps } from "../../../types/input-fields";
+import { NumberFieldProps } from "../../../types/input-fields";
 import { ValidationMessage } from "../../validation-message";
 import "./styles.css";
 
-const b = block("text-field");
+const b = block("number-field");
 
-export const TextField = (props: TextFieldProps) => {
-  const { error, label, name, placeholder, value, pattern, onChange } = props;
+export const NumberField = (props: NumberFieldProps) => {
+  const { error, label, name, placeholder, value, onChange } = props;
   const id = useId();
 
   return (
@@ -18,9 +18,8 @@ export const TextField = (props: TextFieldProps) => {
       <input
         className={b("input")}
         id={id}
-        type="text"
-        pattern={pattern}
-        onChange={(e) => onChange(e.target.value)}
+        type="number"
+        onChange={(e) => onChange(e.target.valueAsNumber)}
         value={value}
         placeholder={placeholder}
         name={name}
