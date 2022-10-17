@@ -1,0 +1,19 @@
+.date-field {
+  display: block;
+}
+
+.date-field__label {
+  display: block;
+  min-height: 22px;
+  margin-left: 4px;
+}
+
+.date-field__input {
+  border: 1px var(--input-style) var(--font-color);
+  width: 100%;
+  padding: 0.7em 0.5em;
+  font-size: 1em;
+  font-family: var(--font-stack);
+  -webkit-appearance: none;
+  border-radius: 0;
+}

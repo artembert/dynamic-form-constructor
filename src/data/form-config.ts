@@ -28,6 +28,12 @@ export const formConfigMock: FormConfig = {
       value: "",
     } as Omit<TextFieldProps, "onChange">,
     {
+      type: "date",
+      name: "expiration-date",
+      label: "Expiration date",
+      value: new Date(2029, 11, 31).toISOString(),
+    },
+    {
       type: "radio",
       name: "country",
       label: "Country",

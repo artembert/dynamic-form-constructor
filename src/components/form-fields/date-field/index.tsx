@@ -1,24 +1,21 @@
 import { ChangeEvent, useId } from "react";
 import block from "bem-cn";
-import { NumberFieldProps } from "../../../types/input-fields";
+import { DateFieldProps } from "../../../types/input-fields";
 import { ValidationMessage } from "../../validation-message";
 import "./styles.css";
 
-const b = block("number-field");
+const b = block("date-field");
+const UsFormatter = new Intl.DateTimeFormat("en-CA");
 
-export const NumberField = (props: NumberFieldProps) => {
-  const { error, label, name, placeholder, value, onChange } = props;
+export const DateField = (props: DateFieldProps) => {
+  const { error, label, name, value, onChange } = props;
   const id = useId();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputValue = parseInt(e.target.value.replace(/\D/, ""), 10);
+    const inputValue = e.target.valueAsDate;
 
-    if (!inputValue) {
-      onChange(0);
-    }
-
-    if (!Number.isNaN(inputValue)) {
-      onChange(inputValue);
+    if (inputValue) {
+      onChange(inputValue.toISOString());
     }
   };
 
@@ -30,12 +27,9 @@ export const NumberField = (props: NumberFieldProps) => {
       <input
         className={b("input")}
         id={id}
-        type="text"
-        inputMode="numeric"
+        type="date"
+        value={UsFormatter.format(new Date(value || Date.now()))}
         onChange={handleChange}
-        value={value || ""}
-        placeholder={placeholder}
-        pattern="\d*"
         name={name}
       />
       <div className={b("validation-container")}>

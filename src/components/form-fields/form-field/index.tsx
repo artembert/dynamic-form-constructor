@@ -4,12 +4,14 @@ import { FormFieldProps } from "../../../types/input-fields";
 import { NumberField } from "../number-field";
 import { RadioField } from "../radio-field";
 import { CheckboxField } from "../checkbox-field";
+import { DateField } from "../date-field";
 
 const fieldMap = {
   text: TextField,
   number: NumberField,
   radio: RadioField,
   checkbox: CheckboxField,
+  date: DateField,
 };
 
 export const FormField = (props: FormFieldProps) => {

@@ -1,4 +1,4 @@
-export type InputValue = string | number | boolean | Date;
+export type InputValue = string | number | boolean;
 
 export type InputChangeHandler<T extends InputValue> = (value: T) => void;
 
@@ -42,7 +42,7 @@ export type NumberFieldProps = BaseInputFieldProps<number> & {
   placeholder?: string;
 };
 
-export type DateFieldProps = BaseInputFieldProps<Date> & {
+export type DateFieldProps = BaseInputFieldProps<string> & {
   type: "date";
 };
 
