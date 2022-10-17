@@ -1,5 +1,9 @@
 import { FormConfig } from "../types/form-config";
-import { NumberFieldProps, TextFieldProps } from "../types/input-fields";
+import {
+  NumberFieldProps,
+  RadioFieldProps,
+  TextFieldProps,
+} from "../types/input-fields";
 
 export const formConfigMock: FormConfig = {
   title: "Payment Details",
@@ -24,12 +28,30 @@ export const formConfigMock: FormConfig = {
       value: "",
     } as Omit<TextFieldProps, "onChange">,
     {
-      type: "text",
+      type: "radio",
       name: "country",
       label: "Country",
-      value: "",
+      value: "USA",
       error: "Required field",
-    },
+      options: [
+        {
+          value: "USA",
+          title: "USA",
+        },
+        {
+          value: "Canada",
+          title: "Canada",
+        },
+        {
+          value: "Mexico",
+          title: "Mexico",
+        },
+        {
+          value: "PuertoRico",
+          title: "Puerto Rico",
+        },
+      ],
+    } as Omit<RadioFieldProps, "onChange">,
     {
       type: "number",
       name: "zip",

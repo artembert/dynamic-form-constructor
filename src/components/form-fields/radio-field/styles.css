@@ -1,0 +1,16 @@
+.radio-field {
+  display: block;
+}
+
+.number-field__label {
+  display: block;
+  min-height: 22px;
+}
+
+.radio-field__item {
+  display: flex;
+}
+
+.radio-field__item-label {
+  margin-left: 4px;
+}

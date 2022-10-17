@@ -18,10 +18,12 @@ export const NumberField = (props: NumberFieldProps) => {
       <input
         className={b("input")}
         id={id}
-        type="number"
-        onChange={(e) => onChange(e.target.valueAsNumber)}
+        type="text"
+        inputMode="numeric"
+        onChange={(e) => onChange(parseInt(e.target.value, 10))}
         value={value}
         placeholder={placeholder}
+        pattern="\d*"
         name={name}
       />
       <div className={b("validation-container")}>

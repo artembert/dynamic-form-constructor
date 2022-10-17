@@ -2,6 +2,11 @@ export type InputValue = string | number | boolean | Date;
 
 export type InputChangeHandler<T extends InputValue> = (value: T) => void;
 
+export type RadioInputOption = {
+  value: string;
+  title: string;
+};
+
 type BaseInputFieldProps<T extends InputValue> = {
   value?: T;
   type: string;
@@ -29,7 +34,7 @@ export type CheckboxFieldProps = BaseInputFieldProps<boolean> & {
 
 export type RadioFieldProps = BaseInputFieldProps<string> & {
   type: "radio";
-  options: string[];
+  options: RadioInputOption[];
 };
 
 export type NumberFieldProps = BaseInputFieldProps<number> & {

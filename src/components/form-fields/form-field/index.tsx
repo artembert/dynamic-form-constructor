@@ -2,10 +2,12 @@ import { memo } from "react";
 import { TextField } from "../text-field";
 import { FormFieldProps } from "../../../types/input-fields";
 import { NumberField } from "../number-field";
+import { RadioField } from "../radio-field";
 
 const fieldMap = {
   text: TextField,
   number: NumberField,
+  radio: RadioField,
 };
 
 export const FormField = (props: FormFieldProps) => {
