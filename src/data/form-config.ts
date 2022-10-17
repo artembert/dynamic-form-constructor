@@ -71,6 +71,12 @@ export const formConfigMock: FormConfig = {
       label: "Discount Code",
       value: "",
     },
+    {
+      type: "checkbox",
+      name: "save-data",
+      label: "save card details for later",
+      value: true,
+    },
   ],
   controls: [
     { type: "reset", title: "Cancel" },

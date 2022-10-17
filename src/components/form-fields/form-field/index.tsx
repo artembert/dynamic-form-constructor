@@ -3,11 +3,13 @@ import { TextField } from "../text-field";
 import { FormFieldProps } from "../../../types/input-fields";
 import { NumberField } from "../number-field";
 import { RadioField } from "../radio-field";
+import { CheckboxField } from "../checkbox-field";
 
 const fieldMap = {
   text: TextField,
   number: NumberField,
   radio: RadioField,
+  checkbox: CheckboxField,
 };
 
 export const FormField = (props: FormFieldProps) => {

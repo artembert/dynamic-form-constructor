@@ -1,0 +1,14 @@
+.checkbox-field {
+  display: block;
+}
+
+.checkbox-field__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.checkbox-field__label {
+  display: block;
+  min-height: 22px;
+  margin-left: 4px;
+}
