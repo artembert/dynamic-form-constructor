@@ -1,4 +1,23 @@
 .notebook {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: min-content min-content max-content;
+  grid-gap: 16px;
+  padding-bottom: 32px;
+}
+
+.notebook__heading {
+  font-size: 24px;
+  padding: 16px 12px 46px 0;
+  writing-mode: vertical-rl;
+  position: relative;
+  rotate: 180deg;
+  text-align: end;
+  font-family: var(--font-family-system);
+}
+
+.notebook__title {
+  padding: 12px 0 8px;
+  margin: 0;
+  font-size: 18px;
+  font-family: var(--font-family-system);
 }

@@ -11,13 +11,14 @@ export const Notebook = (props: {
 
   return (
     <main className={b()}>
-      <section>
-        <h2 className={b("title")}>Structure</h2>
+      <h1 className={b("heading")}>Dynamic form constructor</h1>
+      <section className={b("side")}>
+        <h2 className={b("title")}>Config</h2>
         <div>{markup}</div>
       </section>
-      <section>
-        <h2 className={b("title")}>Result</h2>
-        <div>{result}</div>
+      <section className={b("side")}>
+        <h2 className={b("title")}>Form</h2>
+        <div className="terminal">{result}</div>
       </section>
     </main>
   );
