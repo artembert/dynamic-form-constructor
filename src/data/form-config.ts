@@ -72,6 +72,12 @@ export const formConfigMock: FormConfig = {
       value: "",
     },
     {
+      type: "textarea",
+      name: "address",
+      label: "Address",
+      value: "",
+    },
+    {
       type: "text",
       name: "discount-code",
       label: "Discount Code",

@@ -5,6 +5,7 @@ import { NumberField } from "../number-field";
 import { RadioField } from "../radio-field";
 import { CheckboxField } from "../checkbox-field";
 import { DateField } from "../date-field";
+import { TextareaField } from "../textarea-field";
 
 const fieldMap = {
   text: TextField,
@@ -12,6 +13,7 @@ const fieldMap = {
   radio: RadioField,
   checkbox: CheckboxField,
   date: DateField,
+  textarea: TextareaField,
 };
 
 export const FormField = (props: FormFieldProps) => {
@@ -22,7 +24,7 @@ export const FormField = (props: FormFieldProps) => {
     throw new Error(`Unable to resolve component by type ${type}`);
   }
 
-  return <Component {...props} />;
+  return <Component {...(props as any)} />;
 };
 
 export const FormFieldMemoized = memo(FormField);

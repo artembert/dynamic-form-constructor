@@ -22,7 +22,7 @@ export type TextFieldProps = BaseInputFieldProps<string> & {
   placeholder?: string;
 };
 
-export type TextAreaFieldProps = BaseInputFieldProps<string> & {
+export type TextareaFieldProps = BaseInputFieldProps<string> & {
   type: "textarea";
   placeholder?: string;
   rows?: number;
@@ -48,7 +48,7 @@ export type DateFieldProps = BaseInputFieldProps<string> & {
 
 export type FormFieldProps =
   | TextFieldProps
-  | TextAreaFieldProps
+  | TextareaFieldProps
   | CheckboxFieldProps
   | RadioFieldProps
   | NumberFieldProps
