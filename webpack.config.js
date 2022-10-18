@@ -47,7 +47,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
-      baseUrl: isProd ? "./" : "/",
+      baseUrl: isProd
+        ? "https://artembert.github.io/dynamic-form-constructor/"
+        : "/",
     }),
     new MiniCssExtractPlugin(),
     new DotenvWebpackPlugin(),
