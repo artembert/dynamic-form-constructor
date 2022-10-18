@@ -2,6 +2,8 @@
 
 Generate HTML form by using JSON config
 
+![application](./readme/application.png)
+
 ## Key features
 #### Validate JSON
   ![validate json](./readme/validate-json.gif)
@@ -17,9 +19,9 @@ of wrong field
 Only changed fields will be rerendered when you change the config
 
 ### Configurable options
-- title
-- fields
-- action buttons
+- title: `string`
+- fields: [➡️supported configs](./src/types/input-fields.ts)
+- action buttons: [➡️supported configs](./src/types/controls.ts)
 
 ### Supported field types
 - Text
