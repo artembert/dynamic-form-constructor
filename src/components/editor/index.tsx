@@ -2,6 +2,8 @@ import JSONInput from "react-json-editor-ajrm/es";
 import locale from "react-json-editor-ajrm/locale/en";
 import { EditorProps } from "./types";
 
+const waitAfterKeyPress = 2000;
+
 export const Editor = (props: EditorProps) => {
   const { config, onChange } = props;
 
@@ -16,6 +18,7 @@ export const Editor = (props: EditorProps) => {
       onChange={handleChange}
       confirmGood={false}
       locale={locale}
+      waitAfterKeyPress={waitAfterKeyPress}
       theme="light_mitsuketa_tribute"
       colors={{
         default: "#090707",
