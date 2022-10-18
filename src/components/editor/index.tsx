@@ -1,4 +1,4 @@
-import JSONInput from "react-json-editor-ajrm";
+import JSONInput from "react-json-editor-ajrm/es";
 import locale from "react-json-editor-ajrm/locale/en";
 import { EditorProps } from "./types";
 
