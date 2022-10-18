@@ -13,14 +13,21 @@ export const Editor = (props: EditorProps) => {
     <JSONInput
       id="a_unique_id"
       placeholder={config}
-      style={{
-        outerBox: {},
-        warningBox: {},
-      }}
       onChange={handleChange}
       confirmGood={false}
       locale={locale}
-      theme="dark_vscode_tribute"
+      theme="light_mitsuketa_tribute"
+      colors={{
+        default: "#090707",
+        background: "#ffffff",
+        background_warning: "#f9f9f9",
+        string: "#057D19",
+        number: "#ce33c0",
+        colon: "#090707",
+        keys: "#871094",
+        keys_whiteSpace: "#AF74A5",
+        primitive: "#0033B3",
+      }}
       height="550px"
     />
   );
