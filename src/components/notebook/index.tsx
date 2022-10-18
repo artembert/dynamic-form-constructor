@@ -18,7 +18,7 @@ export const Notebook = (props: {
       </section>
       <section className={b("side")}>
         <h2 className={b("title")}>Form</h2>
-        <div className="terminal">{result}</div>
+        {result}
       </section>
     </main>
   );

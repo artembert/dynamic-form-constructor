@@ -1,7 +1,9 @@
 import { StrictMode, useCallback } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { Output } from "../../components/output";
 import { changeFormField } from "../../store/features/form";
 import { useAppDispatch, useAppSelector } from "../../hooks";
+import { OutputErrorFallback } from "../../components/output/output-error-fallback";
 
 export const OutputContainer = () => {
   const dispatch = useAppDispatch();
@@ -15,12 +17,14 @@ export const OutputContainer = () => {
 
   return (
     <StrictMode>
-      <Output
-        title={title}
-        formFields={config}
-        onChange={fieldChangeHandler}
-        controls={controls}
-      />
+      <ErrorBoundary FallbackComponent={OutputErrorFallback}>
+        <Output
+          title={title}
+          formFields={config}
+          onChange={fieldChangeHandler}
+          controls={controls}
+        />
+      </ErrorBoundary>
     </StrictMode>
   );
 };

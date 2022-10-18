@@ -1,0 +1,13 @@
+.output-error-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.output-error-fallback__title {
+  font-family: var(--font-family-system);
+  font-weight: normal;
+  white-space: break-spaces;
+  text-align: center;
+}
