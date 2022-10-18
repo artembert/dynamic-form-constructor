@@ -47,6 +47,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
+      baseUrl: isProd ? "./" : "/",
     }),
     new MiniCssExtractPlugin(),
     new DotenvWebpackPlugin(),
