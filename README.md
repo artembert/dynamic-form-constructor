@@ -2,6 +2,8 @@
 
 Generate HTML form by using JSON config
 
+Demo: [https://artembert.github.io/dynamic-form-constructor/](https://artembert.github.io/dynamic-form-constructor/)
+
 ![application](./readme/application.png)
 
 ## Key features
