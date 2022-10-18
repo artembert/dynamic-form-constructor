@@ -16,7 +16,7 @@ export const Output = (props: OutputProps) => {
   );
 
   return (
-    <form method="POST" target="_blank" className={b("").mix("terminal")}>
+    <form method="POST" target="_blank" className={b().concat(" terminal")}>
       <fieldset>
         {title ? <legend>{title}</legend> : null}
         <div className={b("fields-list")}>

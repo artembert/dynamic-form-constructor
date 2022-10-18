@@ -6,6 +6,8 @@ import { RadioField } from "../radio-field";
 import { CheckboxField } from "../checkbox-field";
 import { DateField } from "../date-field";
 import { TextareaField } from "../textarea-field";
+import { CodeSnippet } from "../../code-snippet";
+import { FormFieldFallback } from "./form-field-fallback";
 
 const fieldMap = {
   text: TextField,
@@ -21,7 +23,13 @@ export const FormField = (props: FormFieldProps) => {
   const Component = fieldMap[type];
 
   if (Component === undefined) {
-    throw new Error(`Unable to resolve component by type ${type}`);
+    return (
+      <FormFieldFallback>
+        Unable to resolve component
+        <br />
+        <CodeSnippet>{JSON.stringify(props, null, 2)}</CodeSnippet>
+      </FormFieldFallback>
+    );
   }
 
   return <Component {...(props as any)} />;
