@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "./",
     clean: true,
   },
   resolve: {
@@ -47,9 +47,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
-      baseUrl: isProd
-        ? "https://artembert.github.io/dynamic-form-constructor/"
-        : "/",
     }),
     new MiniCssExtractPlugin(),
     new DotenvWebpackPlugin(),
