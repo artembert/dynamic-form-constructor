@@ -27,6 +27,7 @@ export const Editor = (props: EditorProps) => {
         keys: "#871094",
         keys_whiteSpace: "#AF74A5",
         primitive: "#0033B3",
+        error: "red",
       }}
       height="550px"
     />
